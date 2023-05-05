@@ -73,6 +73,9 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/configs/vintf/framework_matrix_xiaomi.xml
