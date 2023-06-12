@@ -152,7 +152,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # PowerShare
-TARGET_POWERSHARE_NODE := /sys/class/qcom-battery/reverse_chg_mode
+SOONG_CONFIG_NAMESPACES += XIAOMI_POWERSHARE
+SOONG_CONFIG_XIAOMI_POWERSHARE := WIRELESS_TX_ENABLE_PATH
+SOONG_CONFIG_XIAOMI_POWERSHARE_WIRELESS_TX_ENABLE_PATH := /sys/class/qcom-battery/reverse_chg_mode
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/configs/properties/odm.prop

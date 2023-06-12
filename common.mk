@@ -489,7 +489,7 @@ PRODUCT_COPY_FILES += \
 
 # Powershare
 PRODUCT_PACKAGES += \
-    vendor.aospa.powershare-service
+    vendor.lineage.powershare@1.0-service.xiaomi
 
 # QMI
 PRODUCT_PACKAGES += \
