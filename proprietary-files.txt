@@ -1253,9 +1253,7 @@ system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 vendor/bin/irsc_util
 vendor/bin/qcc-trd
-vendor/bin/qcc-vendor
 vendor/bin/qmipriod
-vendor/etc/init/init.qccvendor.rc
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/sec_config
