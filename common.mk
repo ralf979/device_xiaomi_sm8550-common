@@ -122,6 +122,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
 
+# Automotive
+PRODUCT_PACKAGES += \
+    android.hardware.automotive.vehicle@2.0-manager-lib
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
@@ -255,6 +259,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2022-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2022-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.memory.block@1.0.vendor \
+    libhidltransport.vendor \
+    libhwbinder.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
@@ -269,6 +280,12 @@ PRODUCT_COPY_FILES += \
 # Identity
 PRODUCT_PACKAGES += \
     android.hardware.identity-V4-ndk.vendor
+
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
 
 # Init
 PRODUCT_PACKAGES += \
@@ -334,9 +351,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Media
+include hardware/qcom-caf/sm8550/media/product.mk
+
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
     libavservices_minijail \
+    libavservices_minijail_vendor \
     libavservices_minijail.vendor \
     libcodec2_soft_common.vendor \
     libcodec2_hidl@1.2.vendor \
@@ -423,9 +443,32 @@ PRODUCT_PACKAGES += \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+# QTI service tracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio-V1-ndk.vendor \
+    android.hardware.radio.config-V1-ndk.vendor \
+    android.hardware.radio.data-V1-ndk.vendor \
+    android.hardware.radio.messaging-V1-ndk.vendor \
+    android.hardware.radio.modem-V1-ndk.vendor \
+    android.hardware.radio.network-V1-ndk.vendor \
+    android.hardware.radio.sim-V1-ndk.vendor \
+    android.hardware.radio.voice-V1-ndk.vendor \
+    android.system.net.netd@1.1.vendor \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    librmnetctl
 
 # Powershare
 PRODUCT_PACKAGES += \
@@ -433,7 +476,11 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libqti_vndfwk_detect.vendor \
+    libqti_vndfwk_detect_vendor \
+    libvndfwk_detect_jni.qti.vendor \
+    libvndfwk_detect_jni.qti_vendor
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -442,6 +489,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors-service.xiaomi-multihal \
     libsensorndkbridge \
     sensors.xiaomi
@@ -506,7 +555,6 @@ PRODUCT_COPY_FILES += \
 
 # Trusted User Interface
 PRODUCT_PACKAGES += \
-    android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
 # Update Engine
@@ -531,6 +579,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V1-ndk_platform.vendor \
     vendor.qti.hardware.vibrator.service.xiaomi
 
 PRODUCT_COPY_FILES += \
@@ -543,12 +592,20 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    android.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.hostapd-V1-ndk.vendor \
+    android.hardware.wifi-service \
+    android.hardware.wifi.supplicant-V1-ndk.vendor \
     hostapd \
+    libqsap_sdk \
     libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.0.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     wpa_supplicant \
     wpa_supplicant.conf
 
