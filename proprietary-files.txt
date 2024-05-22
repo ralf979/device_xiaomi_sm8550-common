@@ -1304,6 +1304,7 @@ vendor/etc/seccomp_policy/qsap_dcfd.policy
 vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/seccomp_policy/qsap_sensors.policy
 vendor/etc/seccomp_policy/qsap_voiceui.policy
+vendor/lib64/libDcfHalBleProto.so
 vendor/lib64/libDcfHalFramework.so
 vendor/lib64/libDcfHalLogger.so
 vendor/lib64/libDcfHalQtiMutex.so
