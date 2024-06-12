@@ -429,6 +429,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Xiaomi8550CarrierConfigRes \
     Xiaomi8550CarrierConfigResMiui \
+    Xiaomi8550DeviceAsWebcamRes \
     Xiaomi8550Frameworks \
     Xiaomi8550Nfc \
     Xiaomi8550SecureElement \
