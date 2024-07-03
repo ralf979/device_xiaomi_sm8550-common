@@ -180,6 +180,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Display
+TARGET_USE_YCRCB_CAMERA_ENCODE := true
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-V1-ndk.vendor \
     android.hardware.graphics.common-V3-ndk.vendor \
