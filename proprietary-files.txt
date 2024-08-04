@@ -131,6 +131,7 @@ vendor/lib64/libmispowerop.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
 vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/libswspatializer_ext.so
 vendor/lib64/libxlog.so
 -vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
