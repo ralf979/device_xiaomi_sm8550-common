@@ -8,3 +8,8 @@ ro.nfc.port=I2C
 
 # QTI
 ro.vendor.qti.va_aosp.support=1
+
+# Adb
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
